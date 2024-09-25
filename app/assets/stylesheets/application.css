@@ -29,6 +29,22 @@ p, ol ,ul, td {
   margin: 33px;
 }
 
-.form{
+a {
+  color: #000;
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding: 7px 5px;
+}
+
+.form{ /*入力欄*/
+  margin-top: 10px;
+}
+
+.button{ /*入力欄*/
   margin-top: 10px;
 }

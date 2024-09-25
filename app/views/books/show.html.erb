@@ -1,3 +1,7 @@
+<div>
+  <%= flash[:notice] %> <!-- 緑で表示する 
+</div>
+
 <p>
   <b>Title:</b>
   <%= @book.title %>
@@ -7,3 +11,6 @@
   <b>Body:</b>
   <%= @book.body %>
 </p>
+
+<%= link_to "Edit", edit_book_path(@book) %> |
+<%= link_to "Back", books_path %>

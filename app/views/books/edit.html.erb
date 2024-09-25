@@ -7,9 +7,12 @@
   <%= f.text_area :body %>
 
   <br>
-  <%= f.submit 'Update Book' %>
+  <div class="button">
+    <%= f.submit 'Update Book' %>
+  </div>
+
+<br>
+<%= link_to "Show", @book %> |
+<%= link_to "Back", books_path %>
 
 <% end %>
-
-<%= link_to "Show",@book %>
-<%= link_to "Back",books_path %>
