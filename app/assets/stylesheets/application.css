@@ -15,6 +15,7 @@
  */
 
 body {
+  background-color: #;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -31,6 +32,10 @@ p, ol ,td {
 
 a {
   color: #000;
+}
+
+a:visited {
+  color: #666;
 }
 
 th {
@@ -52,4 +57,8 @@ td {
 
 .button{ /*入力欄*/
   margin-top: 10px;
+}
+
+.success {
+  color: green;
 }

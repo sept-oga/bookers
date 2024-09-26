@@ -1,8 +1,18 @@
 <h1>Editing book</h1>
+
 <%= form_with model: @book do |f| %> <!-- 7章にて-->
+  <% if @book.errors.any? %>
+    <div class="error">Error Occurred!</div>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
   <div class="form">Title </div>
     <%= f.text_field :title %>
-  
+
   <div class="form">Body</div>
   <%= f.text_area :body %>
 
