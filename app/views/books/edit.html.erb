@@ -2,7 +2,7 @@
 
 <%= form_with model: @book do |f| %> <!-- 7章にて-->
   <% if @book.errors.any? %>
-    <div class="error">Error Occurred!</div>
+    <div class="error">error occurred</div>
     <ul>
       <% @book.errors.full_messages.each do |message| %>
         <li><%= message %></li>

@@ -2,12 +2,6 @@ class BooksController < ApplicationController
   def new
 
   end
-  
-  # インスタンス変数を使う時
-  # ①新規投稿用に空のモデルを用意したい
-  # ②投稿一覧を表示したい
-  # ③詳細画面で対応するデータを表示したい
-  # ローカル変数はデータのみを保存する処理をしたい時に使う
 
   def create
     @book = Book.new(book_params)
@@ -16,7 +10,7 @@ class BooksController < ApplicationController
       redirect_to book_path(@book.id) #投稿が成功するとそのページへ行く
     else
       @books = Book.all
-      render :index # indexの画面に行く
+      render :index # indexの画面へ
     end
   end
 
@@ -37,7 +31,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     if @book.update(book_params)
       flash[:notice] = "Book was successfully created."
-      redirect_to book_path(@book.id) #投稿が成功するとそのページへ行く
+      redirect_to book_path(@book.id) 
     else
       @books = Book.all
       render :edit
